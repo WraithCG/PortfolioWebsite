@@ -6,7 +6,6 @@
       { "href": "#home", "icon": "fa fa-home", "text": "Home" },
       { "href": "#about", "icon": "fa fa-user", "text": "About" },
       { "href": "#services", "icon": "fa fa-list", "text": "Services" },
-      { "href": "#portfolio", "icon": "fa fa-briefcase", "text": "Portfolio" },
       { "href": "#contact", "icon": "fa fa-comments", "text": "Contact" }
     ]
   },
@@ -118,4 +117,5 @@
     "formSubtitle": "I'll contact you as soon as possible!"
   }
 }
+
 
