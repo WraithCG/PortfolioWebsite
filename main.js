@@ -41,8 +41,8 @@ function populatePage(data) {
     // Services Section
     document.getElementById('services-container').innerHTML = data.services.map(service => `<div class="service-item padd-15"><div class="service-item-inner"><div class="icon"><i class="${service.icon}"></i></div><h4>${service.title}</h4><p>${service.description}</p></div></div>`).join('');
 
-    // Portfolio Section
-    document.getElementById('portfolio-container').innerHTML = data.portfolio.map(item => `<div class="portfolio-item padd-15"><div class="portfolio-item-inner shadow-dark"><div class="portfolio-img"><img src="${item.imageUrl}" alt="portfolio image"></div></div></div>`).join('');
+    // // Portfolio Section
+    // document.getElementById('portfolio-container').innerHTML = data.portfolio.map(item => `<div class="portfolio-item padd-15"><div class="portfolio-item-inner shadow-dark"><div class="portfolio-img"><img src="${item.imageUrl}" alt="portfolio image"></div></div></div>`).join('');
 
     // Contact Section
     document.getElementById('contact-title').textContent = data.contact.title;
@@ -106,23 +106,24 @@ function initializeInteractivity(data) {
     }
 
     // Style Switcher Logic
-    document.querySelector(".style-switcher .s-icon").addEventListener("click", () => document.querySelector(".style-switcher").classList.toggle("open"));
-    window.addEventListener("scroll", () => { if (document.querySelector(".style-switcher").classList.contains("open")) document.querySelector(".style-switcher").classList.remove("open"); });
-    const alternateStyles = document.querySelectorAll(".alternate-style");
-    window.setActiveStyle = function(color) {
-        alternateStyles.forEach((style) => {
-            if (color === style.getAttribute("title")) style.removeAttribute("disabled");
-            else style.setAttribute("disabled", "true");
-        });
-    }
-    const dayNight = document.querySelector(".day-night");
-    dayNight.addEventListener("click", () => {
-        dayNight.querySelector("i").classList.toggle("fa-sun");
-        dayNight.querySelector("i").classList.toggle("fa-moon");
-        document.body.classList.toggle("dark");
-    });
-    window.addEventListener("load", () => {
-        if (document.body.classList.contains("dark")) dayNight.querySelector("i").classList.add("fa-sun");
-        else dayNight.querySelector("i").classList.add("fa-moon");
-    });
+    // document.querySelector(".style-switcher .s-icon").addEventListener("click", () => document.querySelector(".style-switcher").classList.toggle("open"));
+    // window.addEventListener("scroll", () => { if (document.querySelector(".style-switcher").classList.contains("open")) document.querySelector(".style-switcher").classList.remove("open"); });
+    // const alternateStyles = document.querySelectorAll(".alternate-style");
+    // window.setActiveStyle = function(color) {
+    //     alternateStyles.forEach((style) => {
+    //         if (color === style.getAttribute("title")) style.removeAttribute("disabled");
+    //         else style.setAttribute("disabled", "true");
+    //     });
+    // }
+    // const dayNight = document.querySelector(".day-night");
+    // dayNight.addEventListener("click", () => {
+    //     dayNight.querySelector("i").classList.toggle("fa-sun");
+    //     dayNight.querySelector("i").classList.toggle("fa-moon");
+    //     document.body.classList.toggle("dark");
+    // });
+    // window.addEventListener("load", () => {
+    //     if (document.body.classList.contains("dark")) dayNight.querySelector("i").classList.add("fa-sun");
+    //     else dayNight.querySelector("i").classList.add("fa-moon");
+    // });
 }
+
