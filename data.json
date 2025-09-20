@@ -15,7 +15,7 @@
     "professions": ["Video Editor", "Web Developer", "Graphic Designer"],
     "description": "I Edited 110+ Video In Last 4 Years using Capcut, Alightmotion, Premiere Pro.",
     "socialCard": {
-      "imageUrl": "/p6/wcg.png",
+      "imageUrl": "/wcg.png",
       "heading": "Connect with Me :)",
       "socials": [
         {
@@ -118,3 +118,4 @@
     "formSubtitle": "I'll contact you as soon as possible!"
   }
 }
+
